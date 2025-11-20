@@ -1,1 +1,2 @@
 from .inference import predict_of_json
+from .inference_models import BertForMaskedLMInference, SoftMaskedBertInference
