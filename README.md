@@ -1,4 +1,20 @@
 # BERTJSC
+
+> **Note**: This is a fork that adds inference-only model classes without PyTorch Lightning dependency.
+>
+> **Key improvements:**
+> - ✅ New inference-only classes: `BertForMaskedLMInference`, `SoftMaskedBertInference`
+> - ✅ ~500MB smaller deployments (no PyTorch Lightning required)
+> - ✅ Faster cold starts for serverless/containerized environments
+> - ✅ 100% compatible with existing pre-trained checkpoints
+> - ✅ Optimized for production inference workloads
+>
+> 📖 **[→ See Inference-Only Usage Guide](INFERENCE.md)** for deployment-optimized usage
+>
+> 🔗 **Original repository**: https://github.com/er-ri/bertjsc
+
+---
+
 Japanese Spelling Error Corrector using BERT(Masked-Language Model).
 
 日本語は[こちら](#はじめに)です
@@ -98,6 +114,21 @@ Any suggestions for improvement or contribution to this project are appreciated!
 ---
 
 ## はじめに
+
+> **注意**: このフォークでは、PyTorch Lightningの依存関係を持たない推論専用のモデルクラスを追加しています。
+>
+> **主な改善点:**
+> - ✅ 推論専用クラスを追加: `BertForMaskedLMInference`, `SoftMaskedBertInference`
+> - ✅ デプロイサイズが約500MB削減（PyTorch Lightning不要）
+> - ✅ サーバーレス/コンテナ環境でのコールドスタートが高速化
+> - ✅ 既存の学習済みチェックポイントと100%互換
+> - ✅ 本番環境の推論ワークロードに最適化
+>
+> 📖 **[→ 推論専用使用ガイド](INFERENCE.md)** でデプロイに最適化された使用方法を確認
+>
+> 🔗 **オリジナルリポジトリ**: https://github.com/er-ri/bertjsc
+
+## はじめに（オリジナル版）
 1. プロジェクトをクローンし、必要なパッケージをインストールしてください。  
     pip install -r requirements.txt
 2. [ここ](https://drive.google.com/file/d/1SiRPOnjoDfK-N2sTEBUlGX22vVo4Pif1/view?usp=sharing)からファインチューニング済みモデルをダウンロードし、任意のディレクトリに配置してください。
