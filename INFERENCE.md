@@ -17,23 +17,6 @@ These classes are ideal for:
 - Docker containers
 - Edge devices with limited resources
 
-## Installation
-
-### Option 1: Install from this repository
-
-```bash
-pip install torch transformers
-pip install git+https://github.com/tomoyuki-fukuoka/bertjsc.git@feature/remove-pytorch-lightning-dependency
-```
-
-### Option 2: Clone and install locally
-
-```bash
-git clone -b feature/remove-pytorch-lightning-dependency https://github.com/tomoyuki-fukuoka/bertjsc.git
-cd bertjsc
-pip install -e .
-```
-
 ## Quick Start
 
 ### 1. Basic Inference (BERT for Masked LM)
@@ -234,24 +217,3 @@ WORKDIR /app
 CMD ["python", "app.py"]
 ```
 
-## FAQ
-
-**Q: Can I use these classes for training?**
-A: No, these classes are designed for inference only. Use the original `LitBertForMaskedLM` and `LitSoftMaskedBert` classes with PyTorch Lightning for training.
-
-**Q: Are the models compatible?**
-A: Yes, checkpoints trained with Lightning-based classes work perfectly with inference-only classes.
-
-**Q: What's the performance improvement?**
-A: Deployment size reduces by ~500MB, and cold start times are significantly faster due to fewer dependencies.
-
-**Q: Do I need to retrain my models?**
-A: No, existing checkpoints work without any changes.
-
-## Support
-
-For issues specific to inference-only classes, please open an issue on:
-https://github.com/tomoyuki-fukuoka/bertjsc/issues
-
-For general BERTJSC questions, refer to the main repository:
-https://github.com/er-ri/bertjsc
